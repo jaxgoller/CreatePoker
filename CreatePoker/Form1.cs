@@ -32,16 +32,10 @@ namespace CreatePoker
         private void Button1_Click(object sender, EventArgs e)
         {
             deck.Shuffle();
-            int[] Card = new int[52];
-
             int cardcount = 0;
             if (deck.All_Dealt() == false)
-            {
-
-
+            { 
                 PictureBox[] boxes = { Card1, Card3, Card2, Card4, Card5, Card6, Card7, Card8, Card9 };
-
-
                 while (cardcount < 2)
                 {
                     Card c = deck.Deal_Card();
@@ -96,7 +90,7 @@ namespace CreatePoker
                 Check1.Visible = true;
             }
         }
-
+        //All in
         private void button1_Click_1(object sender, EventArgs e)
         {
             int PlayMon = int.Parse(MoneyPlayer.Text);

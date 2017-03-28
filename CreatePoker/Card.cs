@@ -13,6 +13,7 @@ namespace CreatePoker
         // Num is number on the card
         public int Num;
         public int Default_Pos;
+
     }
     
 }

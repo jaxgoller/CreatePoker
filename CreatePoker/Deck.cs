@@ -11,6 +11,7 @@ namespace CreatePoker
         Suit[] Suits = new Suit[4];
         Card[] cards = new Card[52];
         Random gen = new Random();
+        //This function Creates a Deck
         public Deck()
         {
             //Building Suits
