@@ -16,6 +16,7 @@ namespace CreatePoker
             //Building Suits
             for(int i=0;i<4;i++)
             {
+                Suits[i] = new Suit();
                 if (i==0)
                 {
                     Suits[i].Name = "Hearts";
@@ -39,6 +40,7 @@ namespace CreatePoker
             {
                 for (int j = 0; j < 13; j++)
                 {
+                    cards[i * 13 + j] = new Card();
                     cards[i * 13 + j].Num = j;
                     
                     cards[i * 13 + j].Suit = Suits[i];

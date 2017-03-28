@@ -12,11 +12,12 @@ namespace CreatePoker
 {
     public partial class Form1 : Form
     {
-        Boolean[] Dealt = new Boolean[52];
         int[] deal = new int[9];
+        Deck deck;
         public Form1()
         {
 
+            deck = new Deck();
             InitializeComponent();
         }
 
@@ -30,28 +31,24 @@ namespace CreatePoker
         //shuffle
         private void Button1_Click(object sender, EventArgs e)
         {
+            deck.Shuffle();
             int[] Card = new int[52];
 
             int cardcount = 0;
-            PictureBox[] boxes = { Card1, Card3,Card2, Card4,Card5,Card6,Card7,Card8,Card9 };
-            
-            
-            for (int y = 0; y < 52; y++)
+            if (deck.All_Dealt() == false)
             {
-                Console.WriteLine(y);
-                Dealt[y] = false;
-            }
-            while (cardcount < 2)
-            {
-                Random card = new Random();
-                int index = card.Next(Photolst.Images.Count);
-                if (Dealt[index] == false)
+
+
+                PictureBox[] boxes = { Card1, Card3, Card2, Card4, Card5, Card6, Card7, Card8, Card9 };
+
+
+                while (cardcount < 2)
                 {
-                    Dealt[index] = true;
+                    Card c = deck.Deal_Card();
+                    int index = c.Default_Pos;
                     boxes[cardcount].Image = Photolst.Images[index];
                     cardcount++;
                 }
-                
             }
 
         }
@@ -83,23 +80,21 @@ namespace CreatePoker
 
         private void Check_Click(object sender, EventArgs e)
         {
-            PictureBox[] boxes = { Card5, Card6, Card7, Card8, Card9 };
-            int cardcount = 0;
-            while (cardcount < 3)
+            if (deck.All_Dealt() == false)
             {
-                Random card = new Random();
-                int index = card.Next(Photolst.Images.Count);
-                if (Dealt[index] == false)
+                PictureBox[] boxes = { Card5, Card6, Card7, Card8, Card9 };
+                int cardcount = 0;
+                while (cardcount < 3)
                 {
-                    Dealt[index] = true;
+                    Card c = deck.Deal_Card();
+                    int index = c.Default_Pos;
                     boxes[cardcount].Image = Photolst.Images[index];
                     cardcount++;
-                }
 
+                }
+                Check.Visible = false;
+                Check1.Visible = true;
             }
-            Check.Visible = false;
-            Check1.Visible = true;
-           
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -137,14 +132,10 @@ namespace CreatePoker
             int cardcount = 0;
             while (cardcount < 1)
             {
-                Random card = new Random();
-                int index = card.Next(Photolst.Images.Count);
-                if (Dealt[index] == false)
-                {
-                    Dealt[index] = true;
-                    boxes[cardcount].Image = Photolst.Images[index];
-                    cardcount++;
-                }
+                Card c = deck.Deal_Card();
+                int index = c.Default_Pos;
+                boxes[cardcount].Image = Photolst.Images[index];
+                cardcount++;
             }
             Check2.Visible = true;
             Check1.Visible = false;
@@ -156,14 +147,10 @@ namespace CreatePoker
             int cardcount = 0;
             while (cardcount < 3)
             {
-                Random card = new Random();
-                int index = card.Next(Photolst.Images.Count);
-                if (Dealt[index] == false)
-                {
-                    Dealt[index] = true;
-                    boxes[cardcount].Image = Photolst.Images[index];
-                    cardcount++;
-                }
+                Card c = deck.Deal_Card();
+                int index = c.Default_Pos;
+                boxes[cardcount].Image = Photolst.Images[index];
+                cardcount++;
             }
         }
 
