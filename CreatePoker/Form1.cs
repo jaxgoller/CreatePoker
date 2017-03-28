@@ -14,6 +14,9 @@ namespace CreatePoker
     {
         int[] deal = new int[9];
         Deck deck;
+        Hand Player0 = new Hand();
+        Hand Player1 = new Hand();
+        River river = new River();
         public Form1()
         {
 
@@ -39,6 +42,7 @@ namespace CreatePoker
                 while (cardcount < 2)
                 {
                     Card c = deck.Deal_Card();
+                    Player1.Cards[cardcount] = c;
                     int index = c.Default_Pos;
                     boxes[cardcount].Image = Photolst.Images[index];
                     cardcount++;
@@ -81,6 +85,7 @@ namespace CreatePoker
                 while (cardcount < 3)
                 {
                     Card c = deck.Deal_Card();
+                    river.Cards[cardcount] = c;
                     int index = c.Default_Pos;
                     boxes[cardcount].Image = Photolst.Images[index];
                     cardcount++;
@@ -129,6 +134,7 @@ namespace CreatePoker
                 while (cardcount < 1)
                 {
                     Card c = deck.Deal_Card();
+                    river.Cards[3] = c;
                     int index = c.Default_Pos;
                     boxes[cardcount].Image = Photolst.Images[index];
                     cardcount++;
@@ -147,6 +153,14 @@ namespace CreatePoker
                 while (cardcount < 3)
                 {
                     Card c = deck.Deal_Card();
+                    if (cardcount == 0)
+                    {
+                        river.Cards[4] = c;
+                    }
+                    else
+                    {
+                        Player0.Cards[cardcount - 1] = c;
+                    }
                     int index = c.Default_Pos;
                     boxes[cardcount].Image = Photolst.Images[index];
                     cardcount++;

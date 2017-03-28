@@ -108,22 +108,22 @@
             this.Photolst.Images.SetKeyName(33, "10_Diamonds.jpg");
             this.Photolst.Images.SetKeyName(34, "10_Hearts.jpg");
             this.Photolst.Images.SetKeyName(35, "10_Spades.jpg");
-            this.Photolst.Images.SetKeyName(36, "Ace_Clubs.jpg");
-            this.Photolst.Images.SetKeyName(37, "Ace_Diamonds.jpg");
-            this.Photolst.Images.SetKeyName(38, "Ace_Hearts.jpg");
-            this.Photolst.Images.SetKeyName(39, "Ace_Spades.jpg");
-            this.Photolst.Images.SetKeyName(40, "Backface_Blue.jpg");
-            this.Photolst.Images.SetKeyName(41, "Jack_Clubs.jpg");
-            this.Photolst.Images.SetKeyName(42, "Jack_Diamonds.jpg");
-            this.Photolst.Images.SetKeyName(43, "Jack_Hearts.jpg");
-            this.Photolst.Images.SetKeyName(44, "Jack_Spades.jpg");
-            this.Photolst.Images.SetKeyName(45, "King_Clubs.jpg");
-            this.Photolst.Images.SetKeyName(46, "King_Diamonds.jpg");
-            this.Photolst.Images.SetKeyName(47, "King_Hearts.jpg");
-            this.Photolst.Images.SetKeyName(48, "King_Spades.jpg");
-            this.Photolst.Images.SetKeyName(49, "Queen_Clubs.jpg");
-            this.Photolst.Images.SetKeyName(50, "Queen_Diamonds.jpg");
-            this.Photolst.Images.SetKeyName(51, "Queen_Hearts.jpg");
+            this.Photolst.Images.SetKeyName(36, "Jack_Clubs.jpg");
+            this.Photolst.Images.SetKeyName(37, "Jack_Diamonds.jpg");
+            this.Photolst.Images.SetKeyName(38, "Jack_Hearts.jpg");
+            this.Photolst.Images.SetKeyName(39, "Jack_Spades.jpg");
+            this.Photolst.Images.SetKeyName(40, "Queen_Clubs.jpg");
+            this.Photolst.Images.SetKeyName(41, "Queen_Diamonds.jpg");
+            this.Photolst.Images.SetKeyName(42, "Queen_Hearts.jpg");
+            this.Photolst.Images.SetKeyName(43, "Queen_Spades.jpg");
+            this.Photolst.Images.SetKeyName(44, "King_Clubs.jpg");
+            this.Photolst.Images.SetKeyName(45, "King_Diamonds.jpg");
+            this.Photolst.Images.SetKeyName(46, "King_Hearts.jpg");
+            this.Photolst.Images.SetKeyName(47, "King_Spades.jpg");
+            this.Photolst.Images.SetKeyName(48, "Ace_Clubs.jpg");
+            this.Photolst.Images.SetKeyName(49, "Ace_Diamonds.jpg");
+            this.Photolst.Images.SetKeyName(50, "Ace_Hearts.jpg");
+            this.Photolst.Images.SetKeyName(51, "Ace_Spades.jpg");
             // 
             // Card1
             // 

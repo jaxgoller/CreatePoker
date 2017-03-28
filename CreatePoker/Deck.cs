@@ -20,7 +20,7 @@ namespace CreatePoker
                 Suits[i] = new Suit();
                 if (i==0)
                 {
-                    Suits[i].Name = "Hearts";
+                    Suits[i].Name = "Clubs";
                 }
                 if (i == 1)
                 {
@@ -28,7 +28,7 @@ namespace CreatePoker
                 }
                 if (i == 2)
                 {
-                    Suits[i].Name = "Clubs";
+                    Suits[i].Name = "Hearts";
                 }
                 if (i == 3)
                 {
