@@ -8,6 +8,7 @@ namespace CreatePoker
 {
     public class Suit
     {
+        // Name is the name of the suit (e.g. Hearts, Diamonds, etc)
         public String Name;
     }
 
