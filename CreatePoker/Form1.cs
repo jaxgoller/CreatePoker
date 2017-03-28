@@ -128,29 +128,35 @@ namespace CreatePoker
 
         private void Check1_Click(object sender, EventArgs e)
         {
-            PictureBox[] boxes = { Card8, Card9 };
-            int cardcount = 0;
-            while (cardcount < 1)
+            if (deck.All_Dealt() == false)
             {
-                Card c = deck.Deal_Card();
-                int index = c.Default_Pos;
-                boxes[cardcount].Image = Photolst.Images[index];
-                cardcount++;
+                PictureBox[] boxes = { Card8, Card9 };
+                int cardcount = 0;
+                while (cardcount < 1)
+                {
+                    Card c = deck.Deal_Card();
+                    int index = c.Default_Pos;
+                    boxes[cardcount].Image = Photolst.Images[index];
+                    cardcount++;
+                }
+                Check2.Visible = true;
+                Check1.Visible = false;
             }
-            Check2.Visible = true;
-            Check1.Visible = false;
         }
 
         private void Check2_Click(object sender, EventArgs e)
         {
-            PictureBox[] boxes = { Card9, Card2,Card4 };
-            int cardcount = 0;
-            while (cardcount < 3)
+            if (deck.All_Dealt() == false)
             {
-                Card c = deck.Deal_Card();
-                int index = c.Default_Pos;
-                boxes[cardcount].Image = Photolst.Images[index];
-                cardcount++;
+                PictureBox[] boxes = { Card9, Card2, Card4 };
+                int cardcount = 0;
+                while (cardcount < 3)
+                {
+                    Card c = deck.Deal_Card();
+                    int index = c.Default_Pos;
+                    boxes[cardcount].Image = Photolst.Images[index];
+                    cardcount++;
+                }
             }
         }
 
