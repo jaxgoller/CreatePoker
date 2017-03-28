@@ -17,6 +17,7 @@ namespace CreatePoker
         Hand Player0 = new Hand();
         Hand Player1 = new Hand();
         River river = new River();
+        Winner Winner;
         public Form1()
         {
 
