@@ -20,7 +20,6 @@ namespace CreatePoker
         Winner Winner;
         public Form1()
         {
-
             deck = new Deck();
             InitializeComponent();
         }
@@ -44,9 +43,11 @@ namespace CreatePoker
                     Player1.Cards[cardcount] = c;
                     int index = c.Default_Pos;
                     boxes[cardcount].Image = Photolst.Images[index];
+                    Console.WriteLine(Photolst.Images[index].ToString());
                     cardcount++;
                 }
             }
+            Shuffle.Visible = false;
         }
         private void Bet_Ammount_TextChanged(object sender, EventArgs e)
         {
@@ -163,6 +164,10 @@ namespace CreatePoker
                     cardcount++;
                 }
             }
+            Hand p0hand = new Hand(river, Player0);
+            p0hand.Score();
+            Hand p1hand = new Hand(river, Player1);
+            p1hand.Score();
         }
 
         private void Card1_Click(object sender, EventArgs e)
