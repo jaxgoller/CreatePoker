@@ -8,8 +8,8 @@ namespace CreatePoker
 {
     class Winner
     {
-        Hand Player0 = new Hand();
-        Hand Player1 = new Hand();
+        Pocket Player0 = new Pocket();
+        Pocket Player1 = new Pocket();
         River river = new River();
         Winner[] P0 = new Winner[7];
         Winner[] P1 = new Winner[7];

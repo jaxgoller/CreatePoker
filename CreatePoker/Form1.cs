@@ -14,8 +14,8 @@ namespace CreatePoker
     {
         int[] deal = new int[9];
         Deck deck;
-        Hand Player0 = new Hand();
-        Hand Player1 = new Hand();
+        Pocket Player0 = new Pocket();
+        Pocket Player1 = new Pocket();
         River river = new River();
         Winner Winner;
         public Form1()
@@ -30,15 +30,13 @@ namespace CreatePoker
             Check1.Visible = false;
             Check2.Visible = false;
         }
-
-
         //shuffle
         private void Button1_Click(object sender, EventArgs e)
         {
             deck.Shuffle();
             int cardcount = 0;
             if (deck.All_Dealt() == false)
-            { 
+            {
                 PictureBox[] boxes = { Card1, Card3, Card2, Card4, Card5, Card6, Card7, Card8, Card9 };
                 while (cardcount < 2)
                 {
@@ -49,9 +47,7 @@ namespace CreatePoker
                     cardcount++;
                 }
             }
-
         }
-
         private void Bet_Ammount_TextChanged(object sender, EventArgs e)
         {
 

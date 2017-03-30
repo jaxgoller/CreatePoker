@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CreatePoker
 {
-    class Hand
+    class Pocket
     {
         public int Player;
         public Card[] Cards = new Card[2];
