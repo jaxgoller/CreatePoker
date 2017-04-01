@@ -139,7 +139,7 @@
             // Card2
             // 
             this.Card2.Image = global::CreatePoker.Properties.Resources.Backface_Blue;
-            this.Card2.Location = new System.Drawing.Point(1033, 68);
+            this.Card2.Location = new System.Drawing.Point(11, 224);
             this.Card2.Name = "Card2";
             this.Card2.Size = new System.Drawing.Size(105, 150);
             this.Card2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -149,7 +149,7 @@
             // Card3
             // 
             this.Card3.Image = global::CreatePoker.Properties.Resources.Backface_Blue;
-            this.Card3.Location = new System.Drawing.Point(12, 224);
+            this.Card3.Location = new System.Drawing.Point(319, 152);
             this.Card3.Name = "Card3";
             this.Card3.Size = new System.Drawing.Size(105, 150);
             this.Card3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -159,7 +159,7 @@
             // Card4
             // 
             this.Card4.Image = global::CreatePoker.Properties.Resources.Backface_Blue;
-            this.Card4.Location = new System.Drawing.Point(1033, 224);
+            this.Card4.Location = new System.Drawing.Point(430, 152);
             this.Card4.Name = "Card4";
             this.Card4.Size = new System.Drawing.Size(105, 150);
             this.Card4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -169,7 +169,7 @@
             // Card6
             // 
             this.Card6.Image = global::CreatePoker.Properties.Resources.Backface_Blue;
-            this.Card6.Location = new System.Drawing.Point(430, 152);
+            this.Card6.Location = new System.Drawing.Point(652, 152);
             this.Card6.Name = "Card6";
             this.Card6.Size = new System.Drawing.Size(105, 150);
             this.Card6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -179,7 +179,7 @@
             // Card8
             // 
             this.Card8.Image = global::CreatePoker.Properties.Resources.Backface_Blue;
-            this.Card8.Location = new System.Drawing.Point(652, 152);
+            this.Card8.Location = new System.Drawing.Point(1022, 68);
             this.Card8.Name = "Card8";
             this.Card8.Size = new System.Drawing.Size(105, 150);
             this.Card8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -189,7 +189,7 @@
             // Card9
             // 
             this.Card9.Image = global::CreatePoker.Properties.Resources.Backface_Blue;
-            this.Card9.Location = new System.Drawing.Point(763, 152);
+            this.Card9.Location = new System.Drawing.Point(1022, 224);
             this.Card9.Name = "Card9";
             this.Card9.Size = new System.Drawing.Size(105, 150);
             this.Card9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -199,7 +199,7 @@
             // Card5
             // 
             this.Card5.Image = global::CreatePoker.Properties.Resources.Backface_Blue;
-            this.Card5.Location = new System.Drawing.Point(319, 152);
+            this.Card5.Location = new System.Drawing.Point(541, 152);
             this.Card5.Name = "Card5";
             this.Card5.Size = new System.Drawing.Size(105, 150);
             this.Card5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -210,7 +210,7 @@
             // Card7
             // 
             this.Card7.Image = global::CreatePoker.Properties.Resources.Backface_Blue;
-            this.Card7.Location = new System.Drawing.Point(541, 152);
+            this.Card7.Location = new System.Drawing.Point(763, 152);
             this.Card7.Name = "Card7";
             this.Card7.Size = new System.Drawing.Size(105, 150);
             this.Card7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -269,7 +269,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Green;
+            this.label5.BackColor = System.Drawing.Color.DarkGreen;
             this.label5.Location = new System.Drawing.Point(29, 384);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 13);
@@ -292,6 +292,7 @@
             this.BetAmmount.Name = "BetAmmount";
             this.BetAmmount.Size = new System.Drawing.Size(89, 35);
             this.BetAmmount.TabIndex = 18;
+            this.BetAmmount.Text = "0";
             this.BetAmmount.TextChanged += new System.EventHandler(this.Bet_Ammount_TextChanged);
             // 
             // Bet
@@ -392,7 +393,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Green;
+            this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(1150, 529);
             this.Controls.Add(this.Check2);
             this.Controls.Add(this.Check1);

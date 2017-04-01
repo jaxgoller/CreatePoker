@@ -26,6 +26,7 @@ namespace CreatePoker
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Check.Visible = false;
             Check1.Visible = false;
             Check2.Visible = false;
         }
@@ -36,7 +37,7 @@ namespace CreatePoker
             int cardcount = 0;
             if (deck.All_Dealt() == false)
             {
-                PictureBox[] boxes = { Card1, Card3, Card2, Card4, Card5, Card6, Card7, Card8, Card9 };
+                PictureBox[] boxes = { Card1, Card2 };
                 while (cardcount < 2)
                 {
                     Card c = deck.Deal_Card();
@@ -48,6 +49,7 @@ namespace CreatePoker
                 }
             }
             Shuffle.Visible = false;
+            Check.Visible = true;
         }
         private void Bet_Ammount_TextChanged(object sender, EventArgs e)
         {
@@ -78,7 +80,7 @@ namespace CreatePoker
         {
             if (deck.All_Dealt() == false)
             {
-                PictureBox[] boxes = { Card5, Card6, Card7, Card8, Card9 };
+                PictureBox[] boxes = { Card3, Card4, Card5 };
                 int cardcount = 0;
                 while (cardcount < 3)
                 {
@@ -127,7 +129,7 @@ namespace CreatePoker
         {
             if (deck.All_Dealt() == false)
             {
-                PictureBox[] boxes = { Card8, Card9 };
+                PictureBox[] boxes = { Card6};
                 int cardcount = 0;
                 while (cardcount < 1)
                 {
@@ -146,7 +148,7 @@ namespace CreatePoker
         {
             if (deck.All_Dealt() == false)
             {
-                PictureBox[] boxes = { Card9, Card2, Card4 };
+                PictureBox[] boxes = { Card7, Card8, Card9 };
                 int cardcount = 0;
                 while (cardcount < 3)
                 {
@@ -164,6 +166,7 @@ namespace CreatePoker
                     cardcount++;
                 }
             }
+            Check2.Visible = false;
             Hand p0hand = new Hand(river, Player0);
             p0hand.Score();
             Hand p1hand = new Hand(river, Player1);

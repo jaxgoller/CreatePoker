@@ -27,7 +27,7 @@ namespace CreatePoker
         }
         public int Score()
         { 
-            if (HasPair() == true)
+            if (HasPair() == true && Has2Pair() == false)
             {
                
                 Console.WriteLine("Has pair");
