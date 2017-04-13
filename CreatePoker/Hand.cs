@@ -27,22 +27,26 @@ namespace CreatePoker
         }
         public int Score()
         {
+            int score;
             if (HasPair() == true && Has2Pair() == false)
             {
-
-                Console.WriteLine("Has pair");
+                score = 1;
+                Console.Write("Has pair");
             }
             else
             {
                 if (Has2Pair() == true)
                 {
-                    Console.WriteLine("Has 2 Pair");
+                    score = 2;
+                    Console.Write("Has 2 Pair");
                 }
                 else
                 {
-                    Console.WriteLine("no pairs detected");
+                    score = 0;
+                    Console.Write("no pairs detected");
                 }
             }
+            Console.WriteLine(score);
             return 0;
         }
         public bool HasPair()
