@@ -13,6 +13,7 @@ namespace CreatePoker
         public Hand(River river, Pocket pocket)
         {
             // a hand is a collection of river and pocket for each player 
+            // this code is putting player 0(ai) and player1(Human Player) into one hand.
             for (int i = 0; i < 2; i++)
             {
                 cards[i] = pocket.Cards[i];
@@ -20,21 +21,28 @@ namespace CreatePoker
             }
             for (int i = 0; i < 5; i++)
             {
-                cards[i + 2] = river.Cards[i];
+                cards[i+2] = river.Cards[i];
             }
-            //every hand must have player so copying pocket's player to hand's player =)
-            player = pocket.Player;
+            //every hand must have player so copying pocket's player to hand's player =) (dosen't have multiple hands)
+           player = pocket.Player;
         }
         public int Score()
-        { 
+        {
             if (HasPair() == true && Has2Pair() == false)
             {
-               
+
                 Console.WriteLine("Has pair");
             }
-            if (Has2Pair() == true)
+            else
             {
-                Console.WriteLine("Has 2 Pair");
+                if (Has2Pair() == true)
+                {
+                    Console.WriteLine("Has 2 Pair");
+                }
+                else
+                {
+                    Console.WriteLine("no pairs detected");
+                }
             }
             return 0;
         }

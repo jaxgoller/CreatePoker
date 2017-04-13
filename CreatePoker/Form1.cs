@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace CreatePoker
 {
     public partial class Form1 : Form
+        //Card Arrangement Bug fix: re order in list to be 2-A of each suit.
     {
         int[] deal = new int[9];
         Deck deck;
