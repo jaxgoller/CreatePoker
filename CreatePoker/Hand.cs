@@ -13,7 +13,6 @@ namespace CreatePoker
         public Hand(River river, Pocket pocket)
         {
             // a hand is a collection of river and pocket for each player 
-            // this code is putting player 0(ai) and player1(Human Player) into one hand.
             for (int i = 0; i < 2; i++)
             {
                 cards[i] = pocket.Cards[i];
