@@ -32,6 +32,7 @@ namespace CreatePoker
             {
                 score = 1;
                 Console.Write("Has pair");
+                System.Windows.Forms.MessageBox.Show("Has a Pair");
             }
             else
             {
