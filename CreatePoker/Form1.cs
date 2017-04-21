@@ -60,6 +60,7 @@ namespace CreatePoker
         private void Bet_Click(object sender, EventArgs e)
         {
             int PlayMon = int.Parse(MoneyPlayer.Text);
+            int BotMon = int.Parse(MoneyBot.Text);
             int BetNum = int.Parse(BetAmmount.Text);
             int PotNum = int.Parse(Pot.Text);
             if (PlayMon > 0)
@@ -68,8 +69,11 @@ namespace CreatePoker
                 {
                     PlayMon = PlayMon - BetNum;
                     string MonPlay = PlayMon.ToString();
+                    BotMon = BotMon - BetNum;
+                    string MonBot = BotMon.ToString();
+                    MoneyBot.Text = (MonBot);
                     MoneyPlayer.Text = (MonPlay);
-                    BetNum = BetNum + PotNum;
+                    BetNum = BetNum + PotNum + BetNum;
                     string bet = BetNum.ToString();
                     Pot.Text = (bet);
                 }
@@ -100,11 +104,16 @@ namespace CreatePoker
         private void button1_Click_1(object sender, EventArgs e)
         {
             int PlayMon = int.Parse(MoneyPlayer.Text);
+            int BotMon = int.Parse(MoneyBot.Text);
             int PotNum = int.Parse(Pot.Text);
-            PotNum = PotNum + PlayMon;
+            PotNum = PotNum + PlayMon+BotMon;
             PlayMon = 0;
+            BotMon = 0;
+            string MonBot = BotMon.ToString();
             string MonPlay = PlayMon.ToString();
+            MoneyBot.Text = (MonBot);
             MoneyPlayer.Text = (MonPlay);
+
             string bet = PotNum.ToString();
             Pot.Text = (bet);
         }
