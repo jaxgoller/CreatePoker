@@ -108,8 +108,8 @@
             this.Photolst.Images.SetKeyName(33, "9_Hearts.jpg");
             this.Photolst.Images.SetKeyName(34, "10_Hearts.jpg");
             this.Photolst.Images.SetKeyName(35, "Jack_Hearts.jpg");
-            this.Photolst.Images.SetKeyName(36, "King_Hearts.jpg");
-            this.Photolst.Images.SetKeyName(37, "Queen_Hearts.jpg");
+            this.Photolst.Images.SetKeyName(36, "Queen_Hearts.jpg");
+            this.Photolst.Images.SetKeyName(37, "King_Hearts.jpg");
             this.Photolst.Images.SetKeyName(38, "Ace_Hearts.jpg");
             this.Photolst.Images.SetKeyName(39, "2_Spades.jpg");
             this.Photolst.Images.SetKeyName(40, "3_Spades.jpg");

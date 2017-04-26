@@ -122,6 +122,7 @@ namespace CreatePoker
                             if (num1 == 0)
                             {
                                 pair2 = true;
+                                num1 = 1;
                             }
                             else
                             {
