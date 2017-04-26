@@ -138,5 +138,32 @@ namespace CreatePoker
             }
             return false;
         }
+        public bool Hasflush()
+        {
+            int clubs = 0;
+            int hearts = 0;
+            int diamonds = 0;
+            int spades = 0;
+            for (int i=0; i<7; i++)
+            {
+                if (cards[i].Suit.Name == "Clubs")
+                {
+                    clubs++;
+                }
+                else  if (cards[i].Suit.Name == "Hearts")
+                {
+                    hearts++;
+                }
+                else if (cards[i].Suit.Name == "Diamonds")
+                {
+                    diamonds++;
+                }
+                else if (cards[i].Suit.Name == "Spades")
+                {
+                    spades++;
+                }
+            }
+            return clubs == 5 || hearts == 5 || diamonds == 5 || spades == 5;
+        }
     }
 }
