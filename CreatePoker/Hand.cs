@@ -180,5 +180,48 @@ namespace CreatePoker
             }
             return clubs == 5 || hearts == 5 || diamonds == 5 || spades == 5;
         }
+        public int highCard()
+        {
+            int High = -1;
+            for (int i=0; i<7; i++)
+            {
+                if (cards[i].Num > High)
+                {
+                    High = cards[i].Num;
+                }
+            }
+            return High;
+        }
+        public bool HasStraight()
+        {
+            int[] number = new int[13];
+            for (int i = 0; i < 7; i++)
+            {
+                int n = cards[i].Num;
+                number[n]++;
+            }
+            for (int i=0; i<9; i++)
+            {
+                if (number[i] == 1 && number[i + 1] == 1 && number[i + 2] == 1 && number[i + 3] == 1 && number[i + 4] == 1)
+                {
+                    return true;
+                }
+            }
+            // ace low straight
+            if (number[0] == 1 && number[1] == 1 && number[2] == 1 && number[3] == 1 && number[12] == 1)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool HasStraightFlush()
+        {
+
+            // TODO: double check all cards in straight are same suit
+            return Hasflush() && HasStraight();
+        }
     }
 }
+// TODO: Compare hand strength 
+//TODO: add royal flush
+//TODO: Tiebreakers in a hand
