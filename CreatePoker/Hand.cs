@@ -28,7 +28,7 @@ namespace CreatePoker
         public int Score()
         {
             int score;
-            if (HasPair() == true && Has2Pair() == false)
+            if (hasonepair() && hastwopair())
             {
                 score = 1;
                 Console.Write("Has pair");
@@ -36,7 +36,7 @@ namespace CreatePoker
             }
             else
             {
-                if (Has2Pair() == true && Has3Pair() == false)
+                if (hastwopair() == true && Has3ofAKind() == false)
                 {
                     score = 2;
                     Console.Write("Has 2 Pair");
@@ -44,7 +44,7 @@ namespace CreatePoker
                 }
                 else
                 {
-                    if (Has3Pair() == true)
+                    if (Has3ofAKind() == true)
                     {
                         score = 3;
                         Console.Write("Has 3 Pair");
@@ -56,87 +56,102 @@ namespace CreatePoker
             Console.WriteLine(score);
             return 0;
         }
-        public bool HasPair()
+        public bool Has3ofAKind()
         {
-            //only has six because the last card will have been checked against all other cards
-            for (int i = 0; i < 6; i++)
+            int[] number = new int[13];
+            for (int i=0; i<7; i++)
             {
-                for (int j = i + 1; j < 7; j++)
-                    if (cards[i].Num == cards[j].Num)
-                    {
-                        Console.WriteLine(cards[i].Num);
-                        return true;
-                    }
+                int n = cards[i].Num;
+                number[n]++;
+            }
+            for (int i=0; i<13; i++)
+            {
+                if (number[i] == 3)
+                {
+                    return true;
+                }
             }
             return false;
         }
-        public bool Has2Pair()
+        public bool Has4ofAKind()
         {
-            bool pair1=false;
-            bool pair2 = false;
-            int num1=-1;
-            for (int i = 0; i < 6; i++)
+            int[] number = new int[13];
+            for (int i = 0; i < 7; i++)
             {
-                for (int j = i + 1; j < 7; j++)
-                {
-                    if (cards[i].Num == cards[j].Num && cards[i].Num!=num1)
-                    {
-                        if (num1 == -1)
-                        {
-                            pair1 = true;
-                            num1 = cards[i].Num;
-                        }
-                        else
-                        {
-                            pair2 = true;
-                        }
-                    }
-                }
+                int n = cards[i].Num;
+                number[n]++;
             }
-            if (pair1==true && pair2 == true)
+            for (int i = 0; i < 13; i++)
             {
-                return true;
+                if (number[i] == 4)
+                {
+                    return true;
+                }
             }
             return false;
         }
-        public bool Has3Pair()
+        public bool HasFullHouse ()
         {
-            bool pair1 = false;
-            bool pair2 = false;
-            bool pair3 = false;
-            int num1 = -1;
-            for (int i = 0; i < 6; i++)
+            bool three = false;
+            bool pair = false;
+            int[] number = new int[13];
+            for (int i = 0; i < 7; i++)
             {
-                for (int j = i + 1; j < 7; j++)
+                int n = cards[i].Num;
+                number[n]++;
+            }
+            for (int i = 0; i < 13; i++)
+            {
+                if (number[i] == 3)
                 {
-                    //whats going on here
-                    if (cards[i].Num == cards[j].Num && cards[i].Num != num1)
-                    {
-                        if (num1 == -1)
-                        {
-                            pair1 = true;
-                            num1 = 0;
-                        }
-                        else
-                        {
-                            if (num1 == 0)
-                            {
-                                pair2 = true;
-                                num1 = 1;
-                            }
-                            else
-                            {
-                                pair3 = true;
-                            }
-                        }
-                    }
+                    three = true;
+                }
+                if (number[i] == 2)
+                {
+                    pair = true;            }
+            }
+            return three && pair;
+        }
+        public bool hasonepair()
+        {
+            bool pair = false;
+            int[] number = new int[13];
+            for (int i = 0; i < 7; i++)
+            {
+                int n = cards[i].Num;
+                number[n]++;
+            }
+            for (int i = 0; i < 13; i++)
+            {
+                if ( number[i] == 2)
+                {
+                    pair = true;
                 }
             }
-            if (pair1 == true && pair2 == true && pair3 == true)
+            return pair;
+        }
+        public bool hastwopair()
+        {
+            bool first = false;
+            bool second = false;
+            int[] number = new int[13];
+            for (int i = 0; i < 7; i++)
             {
-                return true;
+                int n = cards[i].Num;
+                number[n]++;
             }
-            return false;
+            for (int i = 0; i < 13; i++)
+            {
+                if (number[i] == 2)
+                {
+                    first = true;
+                }
+                if (number[i] == 2 && first)
+                {
+                    second = true;
+                }
+            }
+            return second && first;
         }
         public bool Hasflush()
         {
