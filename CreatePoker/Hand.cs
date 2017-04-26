@@ -28,7 +28,8 @@ namespace CreatePoker
         public int Score()
         {
             int score;
-            if (hasonepair() && hastwopair())
+            if (hasonepair() && Has2Pair() == false && HasFullHouse() !=true)
+
             {
                 score = 1;
                 Console.Write("Has pair");
@@ -36,7 +37,7 @@ namespace CreatePoker
             }
             else
             {
-                if (hastwopair() == true && Has3ofAKind() == false)
+                if (hastwopair())
                 {
                     score = 2;
                     Console.Write("Has 2 Pair");
@@ -44,13 +45,43 @@ namespace CreatePoker
                 }
                 else
                 {
-                    if (Has3ofAKind() == true)
+                    if (Has3ofAKind())
                     {
                         score = 3;
-                        Console.Write("Has 3 Pair");
+                        Console.Write("Has 3 of a kind");
                     }
-                    score = 0;
-                    Console.Write("no pairs detected");
+                    else
+                    {
+                        if (HasStraight())
+                        {
+                            score = 4;
+                            Console.WriteLine("has straight");
+                        }
+                        else if (Hasflush())
+                        {
+                            score = 5;
+                            Console.WriteLine("has flush");
+                        }
+                        else if (HasFullHouse())
+                        {
+                            score = 6;
+                            Console.WriteLine("has Full House");
+                        }
+                        else if (Has4ofAKind())
+                        {
+                            score = 7;
+                            Console.WriteLine("has 4 of a kind");
+                        }
+                        else if (HasStraightFlush())
+                        {
+                            score = 8;
+                            Console.WriteLine("Has a straight flush");
+                        }
+                        else
+                        {
+                            score = 0;
+                        }
+                    }
                 }
             }
             Console.WriteLine(score);
@@ -216,9 +247,36 @@ namespace CreatePoker
         }
         public bool HasStraightFlush()
         {
-
-            // TODO: double check all cards in straight are same suit
             return Hasflush() && HasStraight();
+        }
+        public bool Has2Pair()
+        {
+            bool pair1 = false;
+            bool pair2 = false;
+            int num1 = -1;
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = i + 1; j < 7; j++)
+                {
+                    if (cards[i].Num == cards[j].Num && cards[i].Num != num1)
+                    {
+                        if (num1 == -1)
+                        {
+                            pair1 = true;
+                            num1 = cards[i].Num;
+                        }
+                        else
+                        {
+                            pair2 = true;
+                        }
+                    }
+                }
+            }
+            if (pair1 == true && pair2 == true)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
