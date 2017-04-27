@@ -178,12 +178,39 @@ namespace CreatePoker
             }
             Check2.Visible = false;
             Hand p0hand = new Hand(river, Player0);
-            p0hand.Score();
             Hand p1hand = new Hand(river, Player1);
-            p1hand.Score();
+            int p0Score = p0hand.Score();
+            int p1Score = p1hand.Score();
+            if (p0hand.Score() > p1hand.Score())
+            {
+                int PotNum = int.Parse(Pot.Text);
+                int OppMon = int.Parse(MoneyBot.Text);
+                OppMon = OppMon + PotNum;
+                string MonBot = OppMon.ToString();
+                MoneyBot.Text = (MonBot);
+                PotNum = 0;
+                string MonPot = PotNum.ToString();
+                Pot.Text = (MonPot);
+            }
+            else
+            {
+                int PotNum = int.Parse(Pot.Text);
+                int PlayMon = int.Parse(MoneyPlayer.Text);
+                PlayMon = PlayMon + PotNum;
+                string MonPlay = PlayMon.ToString();
+                MoneyPlayer.Text = (MonPlay);
+                PotNum = 0;
+                string MonPot = PotNum.ToString();
+                Pot.Text = (MonPot);
+            }
         }
 
         private void Card1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card7_Click(object sender, EventArgs e)
         {
 
         }

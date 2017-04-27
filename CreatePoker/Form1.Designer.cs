@@ -216,6 +216,7 @@
             this.Card7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Card7.TabIndex = 8;
             this.Card7.TabStop = false;
+            this.Card7.Click += new System.EventHandler(this.Card7_Click);
             // 
             // label2
             // 

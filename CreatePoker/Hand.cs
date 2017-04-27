@@ -281,5 +281,3 @@ namespace CreatePoker
     }
 }
 // TODO: Compare hand strength 
-//TODO: add royal flush
-//TODO: Tiebreakers in a hand
