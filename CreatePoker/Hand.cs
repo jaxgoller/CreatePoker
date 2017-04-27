@@ -85,7 +85,7 @@ namespace CreatePoker
                 }
             }
             Console.WriteLine(score);
-            return 0;
+            return score;
         }
         public bool Has3ofAKind()
         {

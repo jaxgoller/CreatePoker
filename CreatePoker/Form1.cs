@@ -179,7 +179,11 @@ namespace CreatePoker
             Check2.Visible = false;
             Hand p0hand = new Hand(river, Player0);
             Hand p1hand = new Hand(river, Player1);
-            if (p0hand.Score() > p1hand.Score())
+            int p0 = p0hand.Score();
+            int p1 = p1hand.Score();
+            Console.WriteLine("p0 {0}",p0);
+            Console.WriteLine("p1 {0}",p1);
+            if (p0 > p1)
             {
                 int PotNum = int.Parse(Pot.Text);
                 int OppMon = int.Parse(MoneyBot.Text);
@@ -189,8 +193,9 @@ namespace CreatePoker
                 PotNum = 0;
                 string MonPot = PotNum.ToString();
                 Pot.Text = (MonPot);
+                //Console.WriteLine("first if");
             }
-            else if(p0hand.Score() < p1hand.Score())
+            else if(p0 < p1)
             {
                 int PotNum = int.Parse(Pot.Text);
                 int PlayMon = int.Parse(MoneyPlayer.Text);
