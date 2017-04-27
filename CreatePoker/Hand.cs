@@ -123,25 +123,26 @@ namespace CreatePoker
         }
         public bool HasFullHouse ()
         {
-            bool three = false;
-            bool pair = false;
-            int[] number = new int[13];
-            for (int i = 0; i < 7; i++)
-            {
-                int n = cards[i].Num;
-                number[n]++;
-            }
-            for (int i = 0; i < 13; i++)
-            {
-                if (number[i] == 3)
-                {
-                    three = true;
-                }
-                if (number[i] == 2)
-                {
-                    pair = true;            }
-            }
-            return three && pair;
+            //bool three = false;
+            //bool pair = false;
+            //int[] number = new int[13];
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    int n = cards[i].Num;
+            //    number[n]++;
+            //}
+            //for (int i = 0; i < 13; i++)
+            //{
+            //    if (number[i] == 3)
+            //    {
+            //        three = true;
+            //    }
+            //    if (number[i] == 2)
+            //    {
+            //        pair = true;            }
+            //}
+            //return three && pair;
+            return Has3ofAKind() && hasonepair();
         }
         public bool hasonepair()
         {
