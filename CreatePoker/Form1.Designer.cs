@@ -424,7 +424,7 @@
             this.Controls.Add(this.Card1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Jaxton Goller\'s Create Project";
+            this.Text = "Texas Holdem Poker (AP CSP Create)";
             this.TransparencyKey = System.Drawing.Color.DodgerBlue;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Card1)).EndInit();
